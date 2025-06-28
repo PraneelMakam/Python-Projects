@@ -12,10 +12,13 @@ This is a minimal Django skeleton for tracking hardware loans, inventory status 
 ## Setup
 
 1. Install Python 3.11 and `pip`.
-2. Install dependencies:
+2. Install dependencies using the provided requirements file:
    ```bash
-   pip install django psycopg2-binary
+   pip install -r requirements.txt
    ```
+   If you are in an environment without internet access, make sure the required
+   packages (e.g. `Django` and `psycopg2-binary`) are available in your Python
+   installation.
 3. Configure PostgreSQL credentials using environment variables:
    - `POSTGRES_DB`
    - `POSTGRES_USER`

@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Checkout {{ hardware.name }}</h1>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Confirm Checkout</button>
+</form>
+</body>
+</html>

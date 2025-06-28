@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Hardware List</title>
+</head>
+<body>
+<h1>Hardware Inventory</h1>
+<table>
+    <tr>
+        <th>Name</th>
+        <th>Status</th>
+        <th>Actions</th>
+    </tr>
+    {% for item in hardware %}
+    <tr>
+        <td>{{ item.name }}</td>
+        <td>{{ item.status }}</td>
+        <td>
+            <a href="{% url 'checkout' item.pk %}">Checkout</a>
+            <a href="{% url 'checkin' item.pk %}">Checkin</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+<a href="{% url 'export_excel' %}">Export Excel</a> |
+<a href="{% url 'export_pdf' %}">Export PDF</a>
+</body>
+</html>
